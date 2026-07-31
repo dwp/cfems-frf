@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: cfems.frf
-  title: Cfems-Frf
+  title: Cfems-FRF
   description: |
     Prototypes for the CFEMS Staff Fraud Referral Form (FRF) running version 13.18.1 with DWP Frontend installed
 

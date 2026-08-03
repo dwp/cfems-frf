@@ -5,16 +5,91 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
 
-    <h1 class="govuk-heading-xl">
-      Fraud Referral Form (FRF) prototypes
+     <h1 class="govuk-heading-xl">
+      Fraud referral form (FRF) prototypes
     </h1>
-test
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+
+    
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+     
+
+
+
+      <!-- Start of prototype 1 accordion-->
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              First prototype
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+          <dl>
+              <dt class="govuk-heading-s">Date created</dt>
+              <dt class="govuk-body">August 2025</dt>
+              {{govukTag({
+                text: "In progress",
+                classes: "govuk-tag--blue"
+              })}}
+            </dl>
+            <dl>
+              <dt class="govuk-heading-s"><a href="#">Lucid board</a></dt>
+            </dl>
+            <dl>
+              <dt class="govuk-heading-s">What it is</dt>
+              <dt class="govuk-body">To be added...</dt>
+            </dl>
+            <dl>
+              <dt class="govuk-heading-s">Hypotheses to test</dt>
+              <dt class="govuk-body">To be added...</dt>
+            </dl>
+
+            <a href="prototype1/start" class="govuk-button govuk-button--start">Start prototype</a>
+
+            <table class="govuk-table govuk-!-margin-bottom-9">
+              <caption class="govuk-table__caption govuk-table__caption--m">Page list</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Link</th>
+                  <th scope="col" class="govuk-table__header">Error page</th>
+                  <th scope="col" class="govuk-table__header">Notes</th>
+                  <th scope="col" class="govuk-table__header">Confidence</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">Page title</a></td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell"></td>
+                  <td class="govuk-table__cell">
+                    {{govukTag({
+                      text: "High",
+                      classes: "govuk-tag--green"
+                    })}}
+                  </td>
+                </tr>
+                
+  
+              </tbody>
+            </table>
+
+        </div>
+      </div>
+      <!-- End of prototype 1 accordion -->
+    
+    </div>
+
+
   </div>
+
+ 
 </div>
+
+
 
 {% endblock %}

@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Fraud referral form</h1>
+        <p>Use this service to report someone you suspect of benefit fraud.</p>
+
+        <p>Enter as much detail as you can, including the person's National Insurance number if you know it.</p>
+
+        <h2 class="govuk-heading-m">Before you start</h2>
+
+        <p>By starting this referral, you are confirming that you have not searched departmental systems for information unless authorised to do so.</p>
+
+        <a href="acknowledge" class="govuk-button govuk-button--start">Start now</a>
+
+
+      </div>
+      <div class="govuk-grid-column-one-third">
+
+        <h2 class="govuk-heading-m" id="subsection-title">
+         Useful phone numbers
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+
+        <h3 class="govuk-heading-s"> Great Britain</h3>
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <strong>Benefit Fraud Hotline</strong>
+            </li>
+            <li>
+             0800 854 440 (English)
+            </li>
+            <li>
+              0800 678 3722 (Welsh)
+            </li>
+          </ul>
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <strong>Textphone users</strong>
+            </li>
+            <li>
+              0800 328 0512
+            </li>
+          </ul>
+
+        <h3 class="govuk-heading-s">Northern Ireland</h3>
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <strong>Benefit Fraud Hotline</strong>
+            </li>
+            <li>
+              0800 975 6050
+            </li>
+          </ul>
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <strong>Textphone users</strong>
+            </li>
+            <li>
+              028 9055 6991
+            </li>
+          </ul>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+  
+  
+
+{% endblock %}

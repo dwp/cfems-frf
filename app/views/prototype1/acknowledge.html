@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Making a fraud referral - {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Making a fraud referral</h1>
+       
+        <p>You should only include the information given to you.</p>
+
+        <p>You must not search any departmental systems to check information or get any detail unless authorised to do so. Unauthorised access may result in disciplinary action.</p>
+
+        {{ govukButton({
+          text: "I understand"
+        }) }}
+      
+    </div>
+    </div>
+  </main>
+</div>
+
+  
+  
+
+{% endblock %}

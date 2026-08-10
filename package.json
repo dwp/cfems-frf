@@ -5,12 +5,13 @@
     "start": "govuk-prototype-kit start"
   },
   "dependencies": {
-    "govuk-prototype-kit": "13.20.2",
     "@dwp/dwp-frontend": "3.4.0",
     "@govuk-prototype-kit/common-templates": "2.0.1",
     "body-parser": "2.2.2",
     "express": "5.2.1",
     "govuk-frontend": "5.14.0",
+    "govuk-prototype-kit": "13.20.2",
+    "immutable": "^5.1.9",
     "qs": "6.15.2"
   },
   "overrides": {

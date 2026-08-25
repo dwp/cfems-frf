@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Contract ID and National Insurance number - {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+    <form class="form" action="assessment-period-end-date" method="post">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l">Contract ID and National Insurance number</h1>
+
+          {{ govukInput({
+            label: {
+              text: "What is their Universal Credit contract ID? ",
+              classes: "govuk-label--m"
+            },
+            hint: {
+              text: "Contract ID is the administrative code used to track specific employment or service delivery contracts."
+            },
+            classes: "govuk-input--width-10",
+            id: "contract-id",
+            name: "contract-id"
+          }) }}
+
+          {{ govukInput({
+            label: {
+              text: "What is their National Insurance number?",
+              classes: "govuk-label--m"
+            },
+            classes: "govuk-input--width-10",
+            id: "nino",
+            name: "nino"
+          }) }}
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+        </div>
+      </div>
+    </form>
+
+
+  
+  
+
+{% endblock %}

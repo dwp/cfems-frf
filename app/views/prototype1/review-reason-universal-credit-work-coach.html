@@ -1,0 +1,104 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the reason for the review? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+<!-- Redirects to specific review reason pages based on role type -->
+{% if data['role'] == 'UCR Agent' %}
+<script>
+    window.location.href = 'review-reason-ucr-agent'
+</script>
+{% endif %}
+
+{% if data['role'] == 'CFCD Investigations or IRIS MO' %}
+<script>
+    window.location.href = 'review-reason-cfcd-investigations'
+</script>
+{% endif %}
+
+{% if data['role'] == 'PIP Case Manager' %}
+<script>
+    window.location.href = 'review-reason-pip-case-manager'
+</script>
+{% endif %}
+
+{% if data['role'] == 'TAG Team' %}
+<script>
+    window.location.href = 'review-reason-tag-team'
+</script>
+{% endif %}
+
+{% if data['role'] == 'Compliance Officer' %}
+<script>
+    window.location.href = 'review-reason-compliance-officer'
+</script>
+{% endif %}
+
+
+
+
+<form class="form" action="contract-id-nino" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          {{ govukRadios({
+            name: "review-season",
+            fieldset: {
+            legend: {
+              text: "What is the reason for the review?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "Abroad",
+              text: "Abroad",
+              hint: {
+                text: "Allegation customer is currently abroad or has travelled for past periods affecting eligibility"
+              }
+            },
+            {
+              value: "Bank Account Verification",
+              text: "Bank Account Verification",
+              hint: {
+                text: "There must be a shared bank account To-Do, recommending referral"
+              }
+            },
+            {
+              value: "Housing costs - Rent",
+              text: "Housing costs - Rent",
+              hint: {
+                text: "There must be an outstanding Verify private rented housing costs To-Do present"
+              }
+            },
+            {
+              value: "Same child multiple claims",
+              text: "Same child multiple claims",
+              hint: {
+                text: "Allegation where the same child is in payment across 3 or more live UC claims"
+              }
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      
+
+    </div>
+  </div>
+
+  </form>
+
+{% endblock %}

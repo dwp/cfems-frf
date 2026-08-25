@@ -1,0 +1,44 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  What is their National Insurance number? - {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+    <form class="form" action="assessment-period-end-date" method="post">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          {{ govukInput({
+            label: {
+              text: "What is their National Insurance number?",
+              isPageHeading: true,
+              classes: "govuk-label--l"
+            },
+            classes: "govuk-input--width-10",
+            id: "nino",
+            name: "nino"
+          }) }}
+
+
+ 
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+        </div>
+      </div>
+    </form>
+
+
+  
+  
+
+{% endblock %}

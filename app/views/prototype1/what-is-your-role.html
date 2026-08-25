@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  What is your role? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="review-reason-universal-credit-work-coach" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          {{ govukRadios({
+            name: "role",
+            fieldset: {
+            legend: {
+              text: "What is your role?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "Universal Credit Work Coach / Case Manager",
+              text: "Universal Credit Work Coach / Case Manager"
+            },
+            {
+              value: "UCR Agent",
+              text: "UCR Agent"
+            },
+            {
+              value: "CFCD Investigations or IRIS MO",
+              text: "CFCD Investigations or IRIS MO"
+            },
+            {
+              value: "PIP Case Manager",
+              text: "PIP Case Manager"
+            },
+            {
+              value: "TAG Team",
+              text: "TAG Team"
+            },
+            {
+              value: "Compliance Officer",
+              text: "Compliance Officer"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "Other",
+              text: "Other"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      
+
+    </div>
+  </div>
+
+  </form>
+
+{% endblock %}

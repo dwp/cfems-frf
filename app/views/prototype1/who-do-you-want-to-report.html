@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Who do you want to report? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="address-confirm" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          {{ govukRadios({
+            name: "who-report",
+            fieldset: {
+            legend: {
+              text: "Who do you want to report?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "A person",
+              text: "A person"
+            },
+            {
+              value: "An employer or organisation",
+              text: "An employer or organisation"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "A DWP or DfC staff member",
+              text: "A DWP or DfC staff member"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      
+
+    </div>
+  </div>
+
+  </form>
+
+{% endblock %}

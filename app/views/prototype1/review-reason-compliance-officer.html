@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the reason for the review? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+<form class="form" action="contract-id-nino" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          {{ govukRadios({
+            name: "review-season",
+            fieldset: {
+            legend: {
+              text: "What is the reason for the review?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "Compliance to ERT - Housing, Child, Abroad Element ",
+              text: "Compliance to ERT - Housing, Child, Abroad Element ",
+              hint: {
+                text: "Add the elements in doubt on the additional details page later in this form"
+              }
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      
+
+    </div>
+  </div>
+
+  </form>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the reason for the review? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="contract-id-nino" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          {{ govukRadios({
+            name: "review-season",
+            fieldset: {
+            legend: {
+              text: "What is the reason for the review?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "Investigations to ERT and MO to ERT",
+              text: "Investigations to ERT and MO to ERT",
+              hint: {
+                text: "Only to be used by CFCD Investigators or IRIS MO staff"
+              }
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      
+
+    </div>
+  </div>
+
+  </form>
+
+{% endblock %}

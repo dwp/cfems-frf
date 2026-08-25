@@ -1,0 +1,113 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Check your answers - {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+    <form class="form" action="confirmation" method="post">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l">Check your answers</h1>
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Referral type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> referral type</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your role?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> what is your role?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is the reason for the review?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> what is the reason for the review?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Universal Credit contract ID
+            </dt>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Universal Credit contract ID</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National Insurance number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> National Insurance number</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Submitter name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> submitter name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Submitter email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> submitter email address</span></a>
+            </dd>
+          </div>
+        </dl>
+
+          
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+        </div>
+      </div>
+    </form>
+
+
+  
+  
+
+{% endblock %}

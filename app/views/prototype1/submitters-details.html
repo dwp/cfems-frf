@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Submitter's details - {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+    <form class="form" action="check-your-answers" method="post">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l">Submitter's details</h1>
+
+          {{ govukInput({
+            label: {
+              text: "First name",
+              classes: "govuk-label--m"
+            },
+            id: "first-name",
+            name: "first-name"
+          }) }}
+
+          {{ govukInput({
+            label: {
+              text: "Last name",
+              classes: "govuk-label--m"
+            },
+            id: "last-name",
+            name: "last-name"
+          }) }}
+
+          {{ govukInput({
+            label: {
+              text: "Email address",
+              classes: "govuk-label--m"
+            },
+            id: "email-address",
+            name: "email-address"
+          }) }}
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+        </div>
+      </div>
+    </form>
+
+
+  
+  
+
+{% endblock %}

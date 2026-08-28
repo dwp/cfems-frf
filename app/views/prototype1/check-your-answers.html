@@ -22,7 +22,7 @@
               Referral type
             </dt>
             <dd class="govuk-summary-list__value">
-              
+              {{ data['referral-type'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> referral type</span></a>
@@ -30,10 +30,21 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
+              Universal Credit contract ID/claim live?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['contract-id-claim-live-check'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> what is your role?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
               What is your role?
             </dt>
             <dd class="govuk-summary-list__value">
-              
+              {{ data['role'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> what is your role?</span></a>
@@ -44,32 +55,58 @@
               What is the reason for the review?
             </dt>
             <dd class="govuk-summary-list__value">
-              
+              {{ data['review-reason'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> what is the reason for the review?</span></a>
             </dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Universal Credit contract ID
-            </dt>
-            <dd class="govuk-summary-list__value">
-              
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Universal Credit contract ID</span></a>
-            </dd>
-          </div>
+          {% if data['dob'] == 'contract-id' %}
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Universal Credit contract ID
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['contract-id'] }} 
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Universal Credit contract ID</span></a>
+              </dd>
+            </div>
+          {% endif %}
+          {% if data['dob'] == 'contract-id' %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               National Insurance number
             </dt>
             <dd class="govuk-summary-list__value">
-              
+              {{ data['nino'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> National Insurance number</span></a>
+            </dd>
+          </div>
+          {% endif %}
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              End date of the assessment period?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['assessment-period-end-date-day'] + " " + data['assessment-period-end-date-month'] | toMonth + " " + data['assessment-period-end-date-year'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> what is the end date of the assessment period?</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Additional information
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['additional-information'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> additional information</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -77,7 +114,7 @@
               Submitter name
             </dt>
             <dd class="govuk-summary-list__value">
-              
+              {{ data['first-name'] + " " + data['last-name']  }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> submitter name</span></a>
@@ -88,7 +125,7 @@
               Submitter email address
             </dt>
             <dd class="govuk-summary-list__value">
-              
+              {{ data['email-address'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> submitter email address</span></a>

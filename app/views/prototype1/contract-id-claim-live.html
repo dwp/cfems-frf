@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  What is the reason for the review? – {{ serviceName }} – GOV.UK Prototype Kit
+  Is the Universal Credit contract ID/claim live? – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -10,25 +10,31 @@
 
 {% block content %}
 
-
-<form class="form" action="nino" method="post">
+<form class="form" action="contract-id-claim-live-check" method="post">
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
           {{ govukRadios({
-            name: "review-reason",
+            name: "contract-id-claim-live-check",
             fieldset: {
             legend: {
-              text: "What is the reason for the review?",
+              text: "Is the Universal Credit contract ID/claim live?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
+          hint: {
+            text: "ERT can only work on live contract ID's / claims"
+          },
           items: [
             {
-              value: "PIP Prevent pre-payment referral",
-              text: "PIP Prevent pre-payment referral"
+              value: "Yes",
+              text: "Yes"
+            },
+            {
+              value: "No",
+              text: "No"
             }
           ]
         }) }}

@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
- Submitter's details - {{ serviceName }} – GOV.UK Prototype Kit
+ Enter your details - {{ serviceName }} - GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -14,7 +14,7 @@
     <form class="form" action="check-your-answers" method="post">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-l">Submitter's details</h1>
+          <h1 class="govuk-heading-l">Enter your details</h1>
 
           {{ govukInput({
             label: {

@@ -30,13 +30,13 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Universal Credit contract ID/claim live?
+              Is the claim live?
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['contract-id-claim-live-check'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> what is your role?</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> is the claim live?</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -61,20 +61,20 @@
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> what is the reason for the review?</span></a>
             </dd>
           </div>
-          {% if data['dob'] == 'contract-id' %}
+          {% if data['contract-id'] %}
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Universal Credit contract ID
+                Contract ID
               </dt>
               <dd class="govuk-summary-list__value">
                 {{ data['contract-id'] }} 
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Universal Credit contract ID</span></a>
+                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contract ID</span></a>
               </dd>
             </div>
           {% endif %}
-          {% if data['dob'] == 'contract-id' %}
+          {% if data['nino'] %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               National Insurance number
@@ -111,24 +111,24 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Submitter name
+              Your name
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['first-name'] + " " + data['last-name']  }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> submitter name</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> your name</span></a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Submitter email address
+              Your email address
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['email-address'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> submitter email address</span></a>
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> your email address</span></a>
             </dd>
           </div>
         </dl>

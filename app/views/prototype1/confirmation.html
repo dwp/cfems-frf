@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Referral submitted - {{ serviceName }} – GOV.UK Prototype Kit
+ERT referral submitted - {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 
@@ -15,16 +15,17 @@ Referral submitted - {{ serviceName }} – GOV.UK Prototype Kit
           
           
             {{ govukPanel({
-              titleText: "Referral submitted",
-              html: "Your reference number<br><strong>XXX123</strong>"
+              titleText: "ERT referral submitted"
             }) }}
 
             <p class="govuk-body">We have sent you a confirmation email.</p>
 
+            <p class="govuk-body">You do not need to submit another referral.</p>
+
             <h2 class="govuk-heading-m">What happens next</h2>
 
             <p class="govuk-body">
-              The enhanced review team will prcoess your referral.
+              Your referral will be forwarded to the relevant campaign and appropriate action will be taken on the case.
             </p>
             
 

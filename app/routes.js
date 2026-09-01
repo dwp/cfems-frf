@@ -10,7 +10,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Prototype 1 - Referral type
 router.post('/prototype1/referral-type', (req, res) => {
-        if(req.session.data['referral-type'] == 'A standard fraud referral'){
+        if(req.session.data['referral-type'] == 'A fraud referral'){
     res.redirect('who-do-you-want-to-report')
         } else {
     res.redirect('contract-id-claim-live')

@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Is the Universal Credit contract ID/claim live? – {{ serviceName }} – GOV.UK Prototype Kit
+  Is the claim live? – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,13 +19,13 @@
             name: "contract-id-claim-live-check",
             fieldset: {
             legend: {
-              text: "Is the Universal Credit contract ID/claim live?",
+              text: "Is the claim live?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
           hint: {
-            text: "ERT can only work on live contract ID's / claims"
+            text: "The claim must be live to submit an ERT referral"
           },
           items: [
             {

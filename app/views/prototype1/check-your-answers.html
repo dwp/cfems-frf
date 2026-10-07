@@ -17,6 +17,7 @@
           <h1 class="govuk-heading-l">Check your answers before submitting your report</h1>
 
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <h2 class="govuk-heading-m">Referral details</h2>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Referral type
@@ -98,6 +99,11 @@
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> what is the end date of the assessment period?</span></a>
             </dd>
           </div>
+          
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9"></dl>
+          <h2 class="govuk-heading-m">Personal details</h2>
+          
+          
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Additional information
@@ -133,10 +139,11 @@
           </div>
         </dl>
 
-          
+           <h2 class="govuk-heading-m">Now send your report</h2>
+        <p class="govuk-body">By submitting this report you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
           {{ govukButton({
-            text: "Continue"
+            text: "Accept and send"
           }) }}
 
         </div>
